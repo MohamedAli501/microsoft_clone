@@ -333,6 +333,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.invisible {
+  visibility: hidden;
+}
 .relative {
   position: relative;
 }
@@ -345,14 +348,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-2 {
   margin-left: 0.5rem;
 }
-.mt-16 {
-  margin-top: 4rem;
-}
 .mt-10 {
   margin-top: 2.5rem;
 }
 .mr-2 {
   margin-right: 0.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .block {
   display: block;
@@ -375,9 +378,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-full {
   height: 100%;
 }
-.min-h-full {
-  min-height: 100%;
-}
 .w-32 {
   width: 8rem;
 }
@@ -394,9 +394,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-.min-w-full {
-  min-width: 100%;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -672,25 +669,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 768px) {
 
-  .md\:absolute {
-    position: absolute;
-  }
-
-  .md\:block {
-    display: block;
+  .md\:visible {
+    visibility: visible;
   }
 
   .md\:flex {
     display: flex;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
-  .md\:-translate-y-1\/2 {
-    --tw-translate-y: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  .md\:h-full {
+    height: 100%;
   }
 
   .md\:grid-cols-2 {
@@ -699,10 +687,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:items-start {
-    align-items: flex-start;
   }
 
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
